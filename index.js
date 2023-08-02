@@ -3,7 +3,17 @@ for (var i = 0; i <numberofbuttons; i++) {
     
 document.querySelectorAll("button")[i].addEventListener("click",function () {
   var buttoncases=this.innerHTML;
-  switch (buttoncases) {
+  makesound(buttoncases);
+});
+
+document.addEventListener("keypress",function(event) 
+  {
+   makesound(event.key);
+});
+}
+function makesound(key) {
+  
+  switch (key) {
     case 'w':
       var tom1=new Audio('./sounds/tom-1.mp3');
       tom1.play();
@@ -35,6 +45,4 @@ document.querySelectorAll("button")[i].addEventListener("click",function () {
     default: console.log(this.innerHTML);
       break;
   }
-})
-
 }
