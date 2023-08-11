@@ -46,3 +46,10 @@ function makesound(key) {
       break;
   }
 }
+function buttonanimation(currentkey){
+    var activebutton=document.querySelector("." + currentkey);
+    activebutton.classList.add("pressed");
+    setTimeout(function(){
+    activebutton.classList.remove("pressed");
+    },100);
+} 
