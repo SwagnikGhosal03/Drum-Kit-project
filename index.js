@@ -4,11 +4,13 @@ for (var i = 0; i <numberofbuttons; i++) {
 document.querySelectorAll("button")[i].addEventListener("click",function () {
   var buttoncases=this.innerHTML;
   makesound(buttoncases);
+    buttonanimation(buttoncases);
 });
 
 document.addEventListener("keypress",function(event) 
   {
    makesound(event.key);
+      buttonanimation(event.key);
 });
 }
 function makesound(key) {
